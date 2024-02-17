@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
       </div>
 
       <div className={styles.grid}>
+        <Link href="/contact">Contact</Link>
         <a
           href="mailto:danielriley.io@icloud.com"
           className={styles.card}
@@ -51,11 +53,11 @@ export default function Home() {
           <h2>
             LinkedIn <span>-&gt;</span>
           </h2>
-          <p>A necessary evil, the only social media I have.</p>
+          <p>A necessary evil. The only social media I have.</p>
         </a>
 
         <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="https://t.me/danielrileydittmann"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
@@ -63,7 +65,7 @@ export default function Home() {
           <h2>
             Telegram <span>-&gt;</span>
           </h2>
-          <p>Please open a secure chat, so it is encrypted.</p>
+          <p>Please open a secure chat so it is encrypted.</p>
         </a>
 
         <a
@@ -77,6 +79,13 @@ export default function Home() {
           </h2>
           <p>Find me on GitHub.</p>
         </a>
+      </div>
+
+      <div>
+        <footer>
+          {new Date().getFullYear()}
+          <p>Made with ❤️ in Berlin!</p>
+        </footer>
       </div>
     </main>
   );
